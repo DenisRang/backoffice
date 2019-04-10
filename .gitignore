@@ -27,3 +27,5 @@ HELP.md
 
 ### VS Code ###
 .vscode/
+Будет удалено src/main/resources/static/
+Будет удалено src/main/resources/templates/
