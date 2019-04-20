@@ -1,8 +1,9 @@
-package com.cashdesksystem.backoffice.rest;
+package com.cashdesksystem.backoffice.rest.controller;
 
 import com.cashdesksystem.backoffice.rest.model.Alcohol;
 import com.cashdesksystem.backoffice.rest.service.CheckingAlcoholService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,6 +16,7 @@ import java.io.IOException;
  */
 @RestController
 @RequestMapping("/api")
+@Profile("cloud")
 public class BackofficeRestController {
     private CheckingAlcoholService checkingAlcoholService;
 
