@@ -16,8 +16,8 @@ import java.net.UnknownHostException;
 @RequestMapping("/api")
 public class OptionalRestController {
 
-    @GetMapping("/check_opt")
-    public final String checkOldMark() throws UnknownHostException {
+    @GetMapping("/get_ip")
+    public final String getIp() throws UnknownHostException {
         return "Hello " + InetAddress.getLocalHost().getHostAddress();
     }
 }

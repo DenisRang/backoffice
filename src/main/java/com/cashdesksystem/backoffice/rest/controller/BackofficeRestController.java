@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 /**
  * Controller that emulates store backoffice
@@ -58,6 +60,11 @@ public class BackofficeRestController {
     @GetMapping("/check_qr")
     public Alcohol checkQrCode(@RequestParam String qr) throws IOException {
         return checkingAlcoholService.checkQrCode(qr);
+    }
+
+    @GetMapping("/get_ip")
+    public final String getIp() throws UnknownHostException {
+        return "Hello " + InetAddress.getLocalHost().getHostAddress();
     }
 
 }
