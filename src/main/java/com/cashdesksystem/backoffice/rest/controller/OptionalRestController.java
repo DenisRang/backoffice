@@ -12,6 +12,7 @@ import java.net.UnknownHostException;
  * Controller that emulates store backoffice
  */
 @RestController
+@Profile("offline")
 public class OptionalRestController {
 
     @GetMapping("/opt")
