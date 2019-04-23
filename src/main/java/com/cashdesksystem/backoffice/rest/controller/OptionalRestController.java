@@ -12,12 +12,10 @@ import java.net.UnknownHostException;
  * Controller that emulates store backoffice
  */
 @RestController
-@Profile("offline")
-@RequestMapping("/api")
 public class OptionalRestController {
 
-    @GetMapping("/get_ip")
-    public final String getIp() throws UnknownHostException {
-        return "Hello " + InetAddress.getLocalHost().getHostAddress();
+    @GetMapping("/opt")
+    public final String home() throws UnknownHostException {
+        return "Optional Bean";
     }
 }
